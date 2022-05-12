@@ -31,4 +31,12 @@ import data with pandas.
 
 ![Screenshot 2022-05-12 203927](https://user-images.githubusercontent.com/86812576/168088413-eb49ccf0-bf25-40eb-848c-43a73bcf4b9d.png)
 
+# Explanation
+# Extract TFIDF
+
+We will see if it works or not, see the similarity of an encoded text. Logically it is possible, for example try to imagine in BoW (Bag of Words) it only counts words so it will count words in every document. if there are documents that have the same word counted then they are most likely have similar documents. But in this case i will use TFIDF not BoW.
+
+
+
+
 
