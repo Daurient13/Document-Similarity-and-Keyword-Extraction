@@ -1,5 +1,8 @@
 # Document Similarity and Keyword Extraction
 
+![Screenshot 2022-05-12 211659](https://user-images.githubusercontent.com/86812576/168096561-c048a189-2377-4b03-81b8-640fceab02d7.png)
+
+
 At first we have text data like above, then it will be encoded into several dimensions in the form of numbers. The encoded numbers will be placed in certain dimensions.
 These numbers will form a collection whose contents are numbers that have similarities. it means that we get the similarity from TFIDF in the form of numbers that unite in a group, automatically we also get the similarity of the document. so behind the scenes TFIDF will look for similarities in numbers that will be represented in real life (actual data). 
 
