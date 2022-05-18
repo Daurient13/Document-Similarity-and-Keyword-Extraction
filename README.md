@@ -88,9 +88,9 @@ from **nltk.corpus** import **stopwords**
 
 from **string** import **punctuation**
 
-Special Package:
-
 from **sklearn.feature_extraction.text** import **TfidfVectorizer**
+
+from **sklearn.metrics.pairwise** import **cosine_similarity**
 
 # Import Data
 
@@ -113,4 +113,14 @@ Remember, if we have a sentence, it will be made into a vector, and the vector h
 
 ### What is Cosine Similarity?
 ![image](https://user-images.githubusercontent.com/86812576/169061574-2dfa5bd0-de6b-4b12-9492-fba0fd72890e.png)
+
+For example, if we have two vectors (item 1, and item 2), then we only need to look at the angles, if the angles are small (adjacent) then the document is considered similar, otherwise if the angles are opposite then this is a contradicting document.
+
+### Sorting Similar Document
+I will do index sorting whose documents have similarities with other documents. For example I will take the index document [0] to see which documents are similar to it.
+
+![srt](https://user-images.githubusercontent.com/86812576/169065113-0de07e12-d836-433a-90e0-40624944d8cd.png)
+![srt](https://user-images.githubusercontent.com/86812576/169065174-19306ff0-1459-43da-af27-7a33f7988ac4.png)
+![srt3](https://user-images.githubusercontent.com/86812576/169065197-4afb861e-c64b-4198-8e12-41d2638f1c51.png)
+
 
