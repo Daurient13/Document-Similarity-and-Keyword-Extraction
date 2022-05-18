@@ -1,3 +1,66 @@
+# Natural Language Processing
+### what is natural language processing?
+Natural language processing (NLP) refers to the branch of computer science—and more specifically, the branch of artificial intelligence or AI—concerned with giving computers the ability to understand text and spoken words in much the same way human beings can.
+
+NLP combines computational linguistics—rule-based modeling of human language—with statistical, machine learning, and deep learning models. Together, these technologies enable computers to process human language in the form of text or voice data and to ‘understand’ its full meaning, complete with the speaker or writer’s intent and sentiment.
+
+NLP drives computer programs that translate text from one language to another, respond to spoken commands, and summarize large volumes of text rapidly—even in real time. There’s a good chance you’ve interacted with NLP in the form of voice-operated GPS systems, digital assistants, speech-to-text dictation software, customer service chatbots, and other consumer conveniences. But NLP also plays a growing role in enterprise solutions that help streamline business operations, increase employee productivity, and simplify mission-critical business processes.
+
+### Basic Text Preprocessing
+#### Normalization
+change all letters to uppercase or lowercase.
+#### Tokenization
+tokenization will break the entire text into words, or sentences.
+#### Punctuation Removal
+punctuation eraser
+#### Alphanumeric Cleansing
+just make sure that the variable consists of letters and numbers.
+#### Stopwords Removal
+are words that often / always appear in conversational language, stopwords is not absolute and depends on what the domain is talking about.
+### Why Preprocessing
+Vocabuary will be used as a feature. Example(in indonesian language):
+
+- Ini adalah pensil
+- Ini adalah pulpen
+- Saya beli pensin ini    
+- Saya beli pulpen itu
+ 
+Tokens:
+- Ini 
+- adalah
+- pensil
+- pulpen
+- saya
+- beli
+- itu
+This means that only with these tokens we can make the text sentence above.
+Then the token/vovabuary will be compiled into a table.
+
+![image](https://user-images.githubusercontent.com/86812576/168838238-fb84353c-5747-4821-9e41-4a83ded2920a.png)
+
+The left side is as a line (document). And the right part is the feature(vocab) taken from the token.
+If there is the word "Hello" with "hello" is a different token even though the meaning is the same, unless it is normalized.
+
+### What to do after vocab/token becomes a feature?
+### Encode
+### 1. Bag of Words (BoW)
+![image](https://user-images.githubusercontent.com/86812576/169047358-53300fd6-42a0-4966-a565-fef1478fddd6.png)
+
+The task of Bag of Words is to make the text into a vector by counting the tokens.
+When the vocab/token has been counted with the encoder, all you have to do is look for the pattern with machine learning.
+
+### Inverse Document Frequency
+![image](https://user-images.githubusercontent.com/86812576/169047814-4f881a18-73c3-4232-b932-f155558d7df4.png)
+
+The idea is to invert the DF value. Why?
+
+For example, there is a token that appears in a particular document, meaning that it's a keyword for that document. Example, the word "itu" (the example above) has a value of 1/4 and only appears in certain documents and not in other documents, it is specific in certain documents so that it is weighted more strongly (From 1/4 to 4 because it is reversed). Another example is that the word “ini” appears in many documents, because it often appears in many documents, means that the word “ini” is not an important word because it does not distinguish between documents. Actually IDF is scaling for documents.
+
+### 2. Term Frequency - Inverse Document Frequency (TFIDF)
+TFIDF is BoW which is scaled using IDF, which words are important and which words often appear are not important. For example _Stopwords_ that almost appear in the entire document. Usually words that often appear in other documents will be weakened, because the goal is to have a more meaningful encoding. Meanwhile, specific words rarely appear to be strengthened, so that the TFIDF will be decimalized.
+That's why there are 2 options, whether to remove stopwords, or use both.
+Because the function of TFIDF is also to weaken _Stopwords_. This will be done in text preprocessing before entering the machine.
+
 # Document Similarity and Keyword Extraction
 
 ![Screenshot 2022-05-12 211659](https://user-images.githubusercontent.com/86812576/168096561-c048a189-2377-4b03-81b8-640fceab02d7.png)
