@@ -88,6 +88,10 @@ from **nltk.corpus** import **stopwords**
 
 from **string** import **punctuation**
 
+Special Package:
+
+from **sklearn.feature_extraction.text** import **TfidfVectorizer**
+
 # Import Data
 
 import data with pandas. 
@@ -99,7 +103,14 @@ import data with pandas.
 
 We will see if it works or not, see the similarity of an encoded text. Logically it is possible, for example try to imagine in BoW (Bag of Words) it only counts words so it will count words in every document. if there are documents that have the same word counted then they are most likely have similar documents. But in this case i will use TFIDF not BoW.
 
+![Screenshot 2022-05-18 205407](https://user-images.githubusercontent.com/86812576/169057458-277c41fb-5ce9-4897-b156-6a8a60da8190.png)
 
+First, i will do TFIDF vectorizing, input n_gram as much as one or two words. The tokenizer uses word_tokenizer from nltk, and _stopwords_ uses stopwords made by Indonesians because this project is in Indonesian. Then just fit_transform
 
+# TFIDF Similarity -> Document Similarity
 
+Remember, if we have a sentence, it will be made into a vector, and the vector has its place in a certain dimension. For example, if there are only three vectors, it will have three dimensions. for now our vector is as much as the number of vocabulary so it's multi dimensional we can't imagine. so we just need to find the similarity, and the technique to find it is with cosine similarity
+
+### What is Cosine Similarity?
+![image](https://user-images.githubusercontent.com/86812576/169061574-2dfa5bd0-de6b-4b12-9492-fba0fd72890e.png)
 
