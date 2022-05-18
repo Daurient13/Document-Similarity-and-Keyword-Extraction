@@ -117,11 +117,15 @@ Remember, if we have a sentence, it will be made into a vector, and the vector h
 For example, if we have two vectors (item 1, and item 2), then we only need to look at the angles, if the angles are small (adjacent) then the document is considered similar, otherwise if the angles are opposite then this is a contradicting document.
 
 ### Sorting Similar Document
-I will do index sorting whose documents have similarities with other documents. For example I will take the index document [0] to see which documents are similar to it.
+I will do index sorting whose documents have similarities with other documents. For example I will take the index document 0 to see which documents are similar to it.
 
 ![srt](https://user-images.githubusercontent.com/86812576/169065113-0de07e12-d836-433a-90e0-40624944d8cd.png)
 ![srt2](https://user-images.githubusercontent.com/86812576/169065335-068a6283-1539-4fc3-ac47-e00ff66b07a1.png)
 
+From the sorting results above, it can be seen that the document that is most similar to the index 0 document is index 0, of course because it is the same document. the document that has the second similarity is index 144, the third similarity is index 215.
+
+### is it true? let's see the proof.
+
 ![srt3](https://user-images.githubusercontent.com/86812576/169065197-4afb861e-c64b-4198-8e12-41d2638f1c51.png)
 
-
+We can see the results above that index documents 144, and 215 are the indexes that have the most similarity with index 0, while index 932 is the most contradictory document with index 0.
