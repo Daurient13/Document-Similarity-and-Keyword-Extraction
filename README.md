@@ -140,3 +140,20 @@ The idea is that TFIDF has already given weight to specific words, then we just 
 
 The first thing we do is create a variable that holds all the vocabulary we have. Next is the TFIDF matrix is ​​changed to an array and then add the argsort function to get the index.
 
+As evidence, we will take the index 0 document and then sort the features to see if it relates to the contents of the index 0 document that we used as an example of the previous document.
+
+
+![k2](https://user-images.githubusercontent.com/86812576/169203540-3c9c0117-23f8-47fa-9f6d-f33dbdf2d80f.png)
+
+And it turns out that the index 169209 is related to the content of the index document 0, as well as the index feature 436633. i have also done it by looping, for every sorted TFIDF I take ten from the back and convert it to vocab.
+
+### wrap into function
+
+![fg](https://user-images.githubusercontent.com/86812576/169205362-64d9bf88-27d1-4587-804c-215de9fc3b08.png)
+
+### other examples of text data taken from online news
+
+I have prepared one example which I took from online news. I tried to apply the function that has been wrapped to get the keyword and it was quite successful.
+
+![cn](https://user-images.githubusercontent.com/86812576/169205724-abd412cd-51bb-4b5a-86d1-844a60f2c484.png)
+
