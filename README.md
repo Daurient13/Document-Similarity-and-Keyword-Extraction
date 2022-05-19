@@ -61,7 +61,7 @@ TFIDF is BoW which is scaled using IDF, which words are important and which word
 That's why there are 2 options, whether to remove stopwords, or use both.
 Because the function of TFIDF is also to weaken _Stopwords_. This will be done in text preprocessing before entering the machine.
 
-# Document Similarity and Keyword Extraction
+# Document Similarity
 
 ![Screenshot 2022-05-12 211659](https://user-images.githubusercontent.com/86812576/168096561-c048a189-2377-4b03-81b8-640fceab02d7.png)
 
@@ -129,3 +129,14 @@ From the sorting results above, it can be seen that the document that is most si
 ![srt3](https://user-images.githubusercontent.com/86812576/169065197-4afb861e-c64b-4198-8e12-41d2638f1c51.png)
 
 We can see the results above that index documents 144, and 215 are the indexes that have the most similarity with index 0, while index 932 is the most contradictory document with index 0.
+
+Cool, right...
+only by resemblance the feature is equivalent to the resemblance of the document because of the encoding.
+
+# Keyword Extraction
+The idea is that TFIDF has already given weight to specific words, then we just focus on those specific words because that's actually the keyword, so what we do is sort it.
+
+![kw](https://user-images.githubusercontent.com/86812576/169202647-dff07e26-a820-4f63-8c2a-a86ecdc3bddb.png)
+
+The first thing we do is create a variable that holds all the vocabulary we have. Next is the TFIDF matrix is ​​changed to an array and then add the argsort function to get the index.
+
